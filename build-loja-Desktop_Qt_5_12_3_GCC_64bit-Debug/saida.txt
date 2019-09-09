@@ -1,2 +1,6 @@
-"Memorial";$32.34;
+LISTADVD 4
+D: "Combate VI";$14.38;126
+D: "Barroco";$8.52;72
+D: "Nunca Mais!";$11;185
+D: "Eu, Tu, Eles";$7;134
 

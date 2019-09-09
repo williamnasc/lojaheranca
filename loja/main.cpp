@@ -5,11 +5,11 @@ using namespace std;
 
 int main()
 {
+    /// /home/williammcn/Documentos/dados.txt
+    string s;
     cout << "Hello World!" << endl;
-    CD p;
-    ifstream entrada("entrada.txt");
-    p.ler(entrada);
-    /*ofstream saida("saida.txt");
-    p.salvar(saida);
-    */return 0;
+    Loja p;
+    //cin >> s;
+    p.ler("/home/williammcn/Documentos/dados.txt");
+    return 0;
 }

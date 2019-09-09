@@ -54,12 +54,18 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../loja/cd.cpp \
 		../loja/dvd.cpp \
+		../loja/listacd.cpp \
+		../loja/listadvd.cpp \
+		../loja/listalivro.cpp \
 		../loja/livro.cpp \
 		../loja/loja.cpp \
 		../loja/main.cpp \
 		../loja/produto.cpp 
 OBJECTS       = cd.o \
 		dvd.o \
+		listacd.o \
+		listadvd.o \
+		listalivro.o \
 		livro.o \
 		loja.o \
 		main.o \
@@ -253,10 +259,16 @@ DIST          = /opt/Qt5.12.3/5.12.3/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt5.12.3/5.12.3/gcc_64/mkspecs/features/lex.prf \
 		../loja/loja.pro cd.h \
 		dvd.h \
+		listacd.h \
+		listadvd.h \
+		listalivro.h \
 		livro.h \
 		loja.h \
 		produto.h ../loja/cd.cpp \
 		../loja/dvd.cpp \
+		../loja/listacd.cpp \
+		../loja/listadvd.cpp \
+		../loja/listalivro.cpp \
 		../loja/livro.cpp \
 		../loja/loja.cpp \
 		../loja/main.cpp \
@@ -700,6 +712,21 @@ dvd.o: ../loja/dvd.cpp ../loja/dvd.h \
 		../loja/produto.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dvd.o ../loja/dvd.cpp
 
+listacd.o: ../loja/listacd.cpp ../loja/listacd.h \
+		../loja/cd.h \
+		../loja/produto.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o listacd.o ../loja/listacd.cpp
+
+listadvd.o: ../loja/listadvd.cpp ../loja/listadvd.h \
+		../loja/dvd.h \
+		../loja/produto.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o listadvd.o ../loja/listadvd.cpp
+
+listalivro.o: ../loja/listalivro.cpp ../loja/listalivro.h \
+		../loja/livro.h \
+		../loja/produto.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o listalivro.o ../loja/listalivro.cpp
+
 livro.o: ../loja/livro.cpp ../loja/livro.h \
 		../loja/produto.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o livro.o ../loja/livro.cpp
@@ -707,11 +734,21 @@ livro.o: ../loja/livro.cpp ../loja/livro.h \
 loja.o: ../loja/loja.cpp ../loja/loja.h \
 		../loja/produto.h \
 		../loja/livro.h \
+		../loja/listalivro.h \
+		../loja/cd.h \
+		../loja/listacd.h \
 		../loja/dvd.h \
-		../loja/cd.h
+		../loja/listadvd.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o loja.o ../loja/loja.cpp
 
-main.o: ../loja/main.cpp 
+main.o: ../loja/main.cpp ../loja/loja.h \
+		../loja/produto.h \
+		../loja/livro.h \
+		../loja/listalivro.h \
+		../loja/cd.h \
+		../loja/listacd.h \
+		../loja/dvd.h \
+		../loja/listadvd.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../loja/main.cpp
 
 produto.o: ../loja/produto.cpp ../loja/produto.h

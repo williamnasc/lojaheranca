@@ -5,10 +5,12 @@
 bool Produto::ler(istream &I){
 
     char C = 0;         /// char para chegarem da integridade do stream
-    double precod=0;    /// double para ler o preço e converter para int depois
+    double precod = 0;  /// double para ler o preço e converter para int depois
 
     /// ignora os characteres até achar uma aspa dupla
-    I.ignore(numeric_limits<streamsize>::max(), '"');
+    //I.ignore(numeric_limits<streamsize>::max(), '"');
+    I >> C;
+    if (!check(C,'"'))return false;
     getline(I, nome, '"');      /// ler nome do produto
 
     I >> C;                     /// ler o proximo caractere para testar integridade

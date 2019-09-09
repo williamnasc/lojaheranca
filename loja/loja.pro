@@ -6,6 +6,9 @@ CONFIG -= qt
 SOURCES += \
         cd.cpp \
         dvd.cpp \
+        listacd.cpp \
+        listadvd.cpp \
+        listalivro.cpp \
         livro.cpp \
         loja.cpp \
         main.cpp \
@@ -14,6 +17,9 @@ SOURCES += \
 HEADERS += \
     cd.h \
     dvd.h \
+    listacd.h \
+    listadvd.h \
+    listalivro.h \
     livro.h \
     loja.h \
     produto.h

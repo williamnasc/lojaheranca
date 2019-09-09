@@ -3,53 +3,12 @@
 
 #include <produto.h>
 #include <livro.h>
-#include <dvd.h>
+#include <listalivro.h>
 #include <cd.h>
+#include <listacd.h>
+#include <dvd.h>
+#include <listadvd.h>
 
-class ListaLivro
-{
-private:
-  Livro *x;
-  unsigned N;
-public:
-  // Inclua os construtores, destrutor e operadores necessarios
-  void incluir(const Livro &L);
-  bool excluir(unsigned id);
-
-  bool ler(istream &I);
-  void salvar(ostream &O) const;
-  void imprimir() const;
-};
-
-class ListaCD
-{
-private:
-  CD *x;
-  unsigned N;
-public:
-  // Inclua os construtores, destrutor e operadores necessarios
-  void incluir(const CD &L);
-  bool excluir(unsigned id);
-
-  bool ler(istream &I);
-  void salvar(ostream &O) const;
-  void imprimir() const;
-};
-
-class ListaDVD
-{
-private:
-  DVD *x;
-  unsigned N;
-public:
-  // Inclua os construtores, destrutor e operadores necessarios
-  void incluir(const DVD &L);
-  bool excluir(unsigned id);
-
-  bool ler(istream &I);
-  void salvar(ostream &O) const;
-  void imprimir() const;
-};
 
 class Loja
 {
