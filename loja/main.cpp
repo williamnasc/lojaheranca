@@ -6,10 +6,10 @@ using namespace std;
 int main()
 {
     cout << "Hello World!" << endl;
-    Produto p;
+    CD p;
     ifstream entrada("entrada.txt");
     p.ler(entrada);
-    ofstream saida("saida.txt");
+    /*ofstream saida("saida.txt");
     p.salvar(saida);
-    return 0;
+    */return 0;
 }

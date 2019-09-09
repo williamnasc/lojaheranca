@@ -21,6 +21,12 @@ public:
   void digitar();
   // Define a funcao imprimir como sendo salvar em cout
   inline void imprimir() const {salvar(cout);}
+
+  ///checa se o caractere é ou n o esperado
+  inline bool check(char &C,char t){
+      if(C != t){cerr << "Arquivo corrompido";return false;}
+      return true;
+  }
 };
 
 inline istream& operator>>(istream &I, Produto &P) {P.digitar(); return I;}
