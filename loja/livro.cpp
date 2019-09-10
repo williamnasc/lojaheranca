@@ -31,5 +31,6 @@ void Livro::digitar(){
     Produto::digitar();
 
     cout << "autor: ";
+    cin >> ws;
     getline(cin,autor,'\n');
 }
