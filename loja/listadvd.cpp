@@ -110,7 +110,7 @@ void ListaDVD::salvar(ostream &O) const{
         //x[i].ler(I);
         x[i].salvar(O);
     }
-    O << endl;
+    //O << endl;
 }
 
 void ListaDVD::imprimir() const{

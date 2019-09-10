@@ -111,7 +111,7 @@ void ListaLivro::salvar(ostream &O) const{
         //x[i].ler(I);
         x[i].salvar(O);
     }
-    O << endl;
+    //O << endl;
 }
 
 void ListaLivro::imprimir() const{
