@@ -24,7 +24,7 @@ public:
 
   ///checa se o caractere é ou n o esperado
   inline bool check(char &C,char t){
-      if(C != t){cerr << "Arquivo corrompido";return false;}
+      if(C != t){/*cerr << "Arquivo corrompido";*/return false;}
       return true;
   }
 };

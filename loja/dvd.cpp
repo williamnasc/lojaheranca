@@ -10,11 +10,11 @@ bool DVD::ler(istream &I){
     if (!check(C,':'))return false;
 
     /// usar p ler da classe Produto para ler os valores de um produto
-    Produto::ler(I);
+    if(!(Produto::ler(I))) return false;
 
     /// ler o numero, caso ele seja valido add a duracao
     I >> num;
-    if(num <= 0){cerr << "Arquivo corrompido";return false;}
+    if(num <= 0){/*cerr << "Arquivo corrompido";*/return false;}
     duracao = num;
 
     return true;

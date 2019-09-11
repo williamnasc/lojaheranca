@@ -88,11 +88,11 @@ bool ListaLivro::ler(istream &I){
     /// confere se a lista a seguir é lista de livros
     getline(I,S,' ');
 
-    if(S != "LISTALIVRO"){cerr << "Arquivo corrompido";return false;}
+    if(S != "LISTALIVRO"){/*cerr << "Arquivo corrompido";*/return false;}
 
     ///testa se o numero de itens é valido
     I >> num;
-    if(num <= 0){cerr << "Arquivo corrompido";return false;}
+    if(num <= 0){/*cerr << "Arquivo corrompido";*/return false;}
     criar(num);
 
     for (unsigned i=0;i<N;i++){

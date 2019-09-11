@@ -12,8 +12,11 @@ bool Loja::ler(const string& arq){
 
     if( a && b && c )
         return true;
-    else
+    else{
+        cerr << "Arquivo corrompido\n";
         return false;
+    }
+
 
 }
 

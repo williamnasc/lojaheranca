@@ -9,7 +9,7 @@ bool Livro::ler(istream &I){
     if (!check(C,':'))return false;
 
     /// usar p ler da classe Produto para ler os valores de um produto
-    Produto::ler(I);
+    if(!(Produto::ler(I))) return false;
 
     I >> C;
     if(!check(C,'"')) return false;

@@ -87,10 +87,10 @@ bool ListaCD::ler(istream &I){
     I >> ws;
     /// confere se a lista a seguir é lista de livros
     getline(I,S,' ');
-    if(S != "LISTACD"){cerr << "Arquivo corrompido";return false;}
+    if(S != "LISTACD"){/*cerr << "Arquivo corrompido";*/return false;}
     ///testa se o numero de itens é valido
     I >> num;
-    if(num <= 0){cerr << "Arquivo corrompido";return false;}
+    if(num <= 0){/*cerr << "Arquivo corrompido";*/return false;}
 
     criar(num);
 
